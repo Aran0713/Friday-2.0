@@ -1,2 +1,4 @@
 # Friday 2.0
  Newest version of my friday desktop app
+ 
+ I have created an AI desktop app called ‘Jarvis’ using Python, which is similar to Alexa with more personalized functions. This includes displaying and telling me my to do list, the news, the weather and the date. Jarvis has the ability to open any app on my computer, search on Google, play music on YouTube and Spotify and send WhatsApp messages. For Spotify, I had to get creative because whenever a new window was opened it would not be signed into Spotify. Thus, I created automated web bot to sign into Spotify and to play my playlist or a specific song/artist. I then networked the voice commands from my Raspberry Pi 4 to control my desktop app on my laptop. I have also built programs for facial and hand gesture recognize and plan to implement these features into Jarvis. Such experiences require me to devise innovative solutions to deal with all the complex problems that arise. 
