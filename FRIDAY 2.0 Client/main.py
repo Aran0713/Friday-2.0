@@ -132,18 +132,16 @@ toDoLabel = Label(toDo, text="To Do List", bg="black", fg="white", font=("Courie
 toDoLabel.pack(pady=10)
 # list 
 progress = [
-    "Learn to build and execute desktop app", "Learn AI", "Learn Computer vision",
-    "Agenda desktop app (integrate with Friday)", "Learn to build and list phone apps",
-    "Learn Quantum Computing (Read, take course)", "Learn Quantum Mechanics (2 physics courses)",
-    "Learn testing (Jest) (Shair)", "Learn more Robotics", "Learn more about Databases",
-    "Learn more about Networking", "Read More", "Learn Machine Learning", "Ultron"
+    "Build out Friday (Home Server, NPL)",
+    "Build mental health mobile app 'Daily Boost' (quotes, community, messaging, chatbot)",
+    "Learn more robotics (drone, spider, new robotic arm)",
+    "Learn more about Networking",
+    "Read More",
+    "Learn Machine Learning (Computer Vision)"
 ]
 for i in progress:
     listNum = Label(toDo, text="- "+ i, bg="black", fg="white", font=("Courier 10"),  wraplength=330, justify="left")
     listNum.pack(padx= 5, pady=5, anchor="w")
-
-
-
 
 
 friday.after(2000, FridayVoiceControl(friday, voice, date, news, toDo))

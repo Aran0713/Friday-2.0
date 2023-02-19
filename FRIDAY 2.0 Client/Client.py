@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0, './Definitions')
 from Speak import *
 from Youtube import *
-from google import *
+from googleFile import googleSearch
 from Whatsapp import *
 from wiki import *
 from Speak import *
