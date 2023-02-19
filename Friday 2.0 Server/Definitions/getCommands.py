@@ -7,18 +7,23 @@ def takeCMD():
     return query
 
 def takeMic(conn):
+    query = ""
+    print("Listening...")
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Listening...")
-        r.pause_threshold = 1
+        #r.pause_threshold = 1
+        r.adjust_for_ambient_noise(source, duration=1)
         audio = r.listen(source)
         try:
-            print("Recognizing...")
             query = r.recognize_google(audio, language="en-CA")
+            print(query)
+            # if (query != ""):
+            #     print("Recognizing...")
+            #     return query, connection
         except Exception as e:
-            return "null", True
+            return "", True
         else:
             connection = mySpeech(conn, query)
 
-
+        print("Recognizing...")
         return query, connection

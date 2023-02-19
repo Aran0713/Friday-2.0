@@ -53,16 +53,20 @@ def speakMessage(conn):
     while True:
         try:
             speak(conn, "To whom do you want to send a message to?")
-            name = takeMic(conn).lower()
-            if (name == "null"): 
+            name, connection = takeMic(conn)
+            name = name.lower()
+            if (name == ""): 
                 speak(conn, "Would you like to try sending a message again?")
                 break
-            phone_no = username[name]    
-            print(phone_no)
+            for key in username:
+                if(key in name):
+                    name = key
+                    phone_no = username[name]    
+                    print(phone_no)
                                 
             speak(conn, "What would you like to send?")
-            message = takeMic(conn)
-            if (message == "null"):
+            message, connection = takeMic(conn)
+            if (message == ""):
                 speak(conn, "Would you like to try sending a message again") 
                 break
                                 

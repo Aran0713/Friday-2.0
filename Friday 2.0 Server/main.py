@@ -30,14 +30,13 @@ def threaded(conn):
     startup(conn)
 
     while True:
-        
         if (connection == False):
             break
 
         #Takes input
         query, connection = takeMic(conn)
         query = query.lower()        
-      
+        print(query)
         if ("friday" in query):
             speak(conn, "Now Listening")    
             while True:

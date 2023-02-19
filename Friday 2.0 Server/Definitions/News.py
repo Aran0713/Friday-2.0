@@ -7,7 +7,8 @@ def news(conn):
     categories = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
 
     speak(conn, "What would you like to hear about?")
-    topic = takeMic(conn).lower()
+    topic, connection = takeMic(conn)
+    topic = topic.lower()
 
     while True:
         if any(i in topic for i in categories):
@@ -43,7 +44,8 @@ def news(conn):
             speak(conn, "Sorry, I couldn't hear you")
         
         speak(conn, "Would you like to hear about another topic?")
-        answer = takeMic(conn).lower()
+        answer, connection = takeMic(conn)
+        answer = answer.lower()
         if ('yes' in answer):
             speak(conn, "closeMatter")
             topic = answer

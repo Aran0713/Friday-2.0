@@ -5,6 +5,7 @@ print_lock = threading.Lock()
 
 ### Speak 
 def speak(conn, audio):
+    print(conn)
     conn.send(bytes(audio, encoding='utf-16'))
     recData = conn.recv(1024)
 
@@ -16,7 +17,7 @@ def mySpeech(conn, audio):
     if (recData == '') or (not recData):
         print("A")
         return False
-    return True
+    return conn
     
 
     
