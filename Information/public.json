@@ -1,5 +1,6 @@
 {
     "IPAddress": "192.168.3.116",
+    "IPAddressServer": "0.0.0.0",
     "Port": 65432,
     "toDoList" : [
         "Build out Friday (Home Server, NPL)",
@@ -10,7 +11,11 @@
         "Learn Machine Learning (Computer Vision)"
     ],
     "newsApiKey1": "659939194da24d3da6e915075bdaff44",
-    "newsApiKey2": "f8343e4bd0384897a38c71aec9bee17e"
+    "newsApiKey2": "f8343e4bd0384897a38c71aec9bee17e",
+    "month": {
+        "1": "January", "2": "February", "3": "March", "4": "April", "5": "May", "6": "June",
+        "7": "July", "8": "August", "9": "September", "10": "October", "11": "November", "12": "December"
+    }
     
 }
 

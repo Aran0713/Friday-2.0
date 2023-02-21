@@ -31,16 +31,15 @@ def setVoice(conn, voice):
 
 ### To get the date (Month/Day/Year)
 def date(conn):
+    import json 
+    with open('.././Information/public.json') as public:
+        publicData = json.load(public)
+
     year = str(datetime.datetime.now().year)
     monthNum = datetime.datetime.now().month
     day = str(datetime.datetime.now().day)
-    
-    month = {
-        1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
-        7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"
-    }
 
-    speak(conn, "The current date is " + month[monthNum] +" "+ day +", "+ year)
+    speak(conn, "The current date is " + publicData["month"][str(monthNum)]  +" "+ day +", "+ year)
     
 ### To get the time (Hour/Min/Sec)
 def time(conn):

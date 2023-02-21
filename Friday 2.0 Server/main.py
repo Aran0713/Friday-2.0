@@ -19,11 +19,13 @@ from weather import *
 from News import *
 
 # server constants
-#HOST = '127.0.0.1'
-HOST = '0.0.0.0'
-PORT = 65432
-connection = True
+import json
+with open('../Information/public.json') as public:
+    publicData = json.load(public)
 
+HOST = publicData["IPAddressServer"] # The server's hostname or IP address #HOST = '127.0.0.1'
+PORT = publicData["Port"]  # The port used by the server
+connection = True
 
 def threaded(conn):
     connection = True

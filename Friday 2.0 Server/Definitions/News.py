@@ -1,9 +1,13 @@
 from newsapi import NewsApiClient
 from Basic import *
 from getCommands import *
+import json
+with open('.././Information/public.json') as public:
+    publicData = json.load(public)
+
+newsapi = NewsApiClient(api_key=publicData["newsApiKey1"]) 
 
 def news(conn):
-    newsapi = NewsApiClient(api_key='f8343e4bd0384897a38c71aec9bee17e')
     categories = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
 
     speak(conn, "What would you like to hear about?")

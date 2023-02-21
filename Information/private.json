@@ -1,7 +1,19 @@
 {
     "spotifyUsername": "arantt3",
     "spotifyClientID": "bce81e38be294ed28e98f065dd4dd0a3",
-    "spotifyClientSecret": "30433ef4614844c7a3f942233483436d"
+    "spotifyClientSecret": "30433ef4614844c7a3f942233483436d",
+    "username": {
+        "myself": "+1 647 619 0713",
+        "brother": "+1 647 482 4246",
+        "dad": "+1 416 418 0037",
+        "mom": "+1 647 779 8572",
+        "poo": "+1 647 608 7633",
+        "kish": "+1 647 332 2215",
+        "meera": "+1 416 655 2240",
+        "zip": "+1 416 824 0567",
+        "mark": "+1 647 533 1234",
+        "box": "+1 647 632 1709"
+    }
     
     
 }

@@ -2,21 +2,16 @@ from time import sleep
 from Basic import *
 from getCommands import *
 
+# Users is a list of my conatcts which is stored in my private.json folder
+import json
+with open('.././Information/private.json') as private:
+    privateData = json.load(private)
+username = privateData["username"]
+
+# Note: to use this function you must first connect your computer to your whatsapp
+
 def sendWhatsappMsg(phone_no, message, conn):
     speak(conn, "Whatsapp " + 'http://web.whatsapp.com/send?phone='+phone_no+'&text='+message)
-    
-username = {
-    'myself': '+1 647 619 0713',
-    'brother': '+1 647 482 4246',
-    'dad': '+1 416 418 0037',
-    'mom': '+1 647 779 8572',
-    'poo': '+1 647 608 7633',
-    'kish': '+1 647 332 2215',
-    'meera': '+1 416 655 2240',
-    'zip': '+1 416 824 0567',
-    'mark': '+1 647 533 1234',
-    'box': '+1 647 632 1709'
-}
 
 def typeMessage(conn):
     while True:
