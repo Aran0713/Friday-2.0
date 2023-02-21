@@ -16,11 +16,15 @@
         "1": "January", "2": "February", "3": "March", "4": "April", "5": "May", "6": "June",
         "7": "July", "8": "August", "9": "September", "10": "October", "11": "November", "12": "December"
     }, 
+
     "rent": "600",
     "account number": "21735298",
     "address": "123 park ave",
     "security deposit": "500",
-    "description of rental": ""
-
+    "description of the rental": "A cozy two-bedroom apartment located in a quiet neighborhood with easy access to public transportation and local shops.",
+    "terms":"The term of the tenancy shall be for one year, commencing on the first day of the month and ending on the last day of the twelfth month.",
+    "repair": "The tenant is responsible for minor repairs and maintenance such as replacing light bulbs and keeping the property clean, while major repairs and maintenance are the landlord's responsibility and should be reported promptly.",
+    "smoking policy":"Smoking is strictly prohibited in the premises and a $200 fine will be charged for any damages caused by smoking.",
+    "disclosures":"The landlord is required to disclose any known lead-based paint hazards in the rental unit and provide the tenant with an EPA-approved lead hazard information pamphlet."
 }
 

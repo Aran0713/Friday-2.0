@@ -7,9 +7,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
-# username = 'arantt3'
-# clientID = 'bce81e38be294ed28e98f065dd4dd0a3'
-# clientSecret = '30433ef4614844c7a3f942233483436d'
 
 # Note: private.json is not uploaded on to github so you will not be able to use spotify without inputting your own keys
 import json
@@ -20,7 +17,6 @@ clientID = privateData["spotifyClientID"]
 clientSecret = privateData["spotifyClientSecret"]
 redirectURI = 'http://google.com/'
 
-print("In hereeee")
 # Create OAuth Object
 oauth_object = spotipy.SpotifyOAuth(clientID,clientSecret,redirectURI)
 # Create token
@@ -32,41 +28,31 @@ user = spotifyObject.current_user()
         
 ### Set up ###        
 def setUpPlaylist():
-    print("In playlist")
     print("Welcome, "+ user['display_name'])
     path = "../Definitions/chromedriver.exe"
-    print("past driver")
     chromeService = Service(executable_path=path)
     driver = webdriver.Chrome(service=chromeService)
     driver.get('https://open.spotify.com/collection/tracks')
-    print("opened window")
     driver.maximize_window()
-    print("1")
     sleep(2)
     xButton = driver.find_element(by="xpath", value='//button[@class="onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon"]')
     xButton.click()
-    print("2")
     loginButton = driver.find_element(by="xpath", value='//button[@class="Button-sc-qlcn5g-0 jsmWVV"]')
     loginButton.click()
-    print("3")
     sleep(2)
     usernameInput = driver.find_element(by="xpath", value='//input[@id="login-username"]')
     usernameInput.click()
-    print("4")
     usernameInput.send_keys("aran0713@hotmail.com")
     passwordInput = driver.find_element(by="xpath", value='//input[@id="login-password"]')
     passwordInput.click()
-    print("5")
     passwordInput.send_keys("sangeethkeke")
     passwordInput.send_keys(Keys.RETURN)
-    print("6")
     return driver
       
         
 ### Playlists ###
 def playLikedSongs():
     driver = setUpPlaylist()
-    print("Back in function")
     sleep(5)
     likedSongsButton = driver.find_element(by="xpath", value='//div[@class="g3f_cI5usQX7ZOQyDtA9"]')
     likedSongsButton.click()
