@@ -1,0 +1,16 @@
+{
+    "IPAddress": "192.168.3.116",
+    "Port": 65432,
+    "toDoList" : [
+        "Build out Friday (Home Server, NPL)",
+        "Build mental health mobile app 'Daily Boost' (quotes, community, messaging, chatbot)",
+        "Learn more robotics (drone, spider, new robotic arm)",
+        "Learn more about Networking",
+        "Read More",
+        "Learn Machine Learning (Computer Vision)"
+    ],
+    "newsApiKey1": "659939194da24d3da6e915075bdaff44",
+    "newsApiKey2": "f8343e4bd0384897a38c71aec9bee17e"
+    
+}
+

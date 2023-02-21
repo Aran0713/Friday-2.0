@@ -6,9 +6,11 @@ import pyautogui
 os.system('cls')
 import datetime
 from Client import *
-
 from newsapi import NewsApiClient
-newsapi = NewsApiClient(api_key='659939194da24d3da6e915075bdaff44') 
+
+import json
+with open('../Information/public.json') as public:
+    publicData = json.load(public)
 
 width, height = pyautogui.size()
 
@@ -79,8 +81,7 @@ voice.attributes('-alpha',0.8)
 
 
 ##### Bottom Left #####
-#newsapi = NewsApiClient(api_key='f8343e4bd0384897a38c71aec9bee17e')
-newsapi = NewsApiClient(api_key='659939194da24d3da6e915075bdaff44') # make sure to give this to server aswell
+newsapi = NewsApiClient(api_key=publicData["newsApiKey1"]) 
 newsWidth = str(round(0.18*width))
 newsHeight = str(round(0.55*height))
 newsYPosition = str(round(0.35*height))
@@ -115,7 +116,6 @@ titleLabel = Label(news, text=newsdata[4]["title"], bg="black", fg="white", font
 
 
 ##### Bottom Right #####
-
 toDoWidth = str(round(0.18*width))
 toDoHeight = str(round(0.55*height))
 toDoXPosition = str(round(width-int(toDoWidth)-20))
@@ -130,16 +130,8 @@ toDo.attributes('-alpha',0.8)
 # todo label
 toDoLabel = Label(toDo, text="To Do List", bg="black", fg="white", font=("Courier 20 underline"))
 toDoLabel.pack(pady=10)
-# list 
-progress = [
-    "Build out Friday (Home Server, NPL)",
-    "Build mental health mobile app 'Daily Boost' (quotes, community, messaging, chatbot)",
-    "Learn more robotics (drone, spider, new robotic arm)",
-    "Learn more about Networking",
-    "Read More",
-    "Learn Machine Learning (Computer Vision)"
-]
-for i in progress:
+
+for i in publicData["toDoList"]:
     listNum = Label(toDo, text="- "+ i, bg="black", fg="white", font=("Courier 10"),  wraplength=330, justify="left")
     listNum.pack(padx= 5, pady=5, anchor="w")
 

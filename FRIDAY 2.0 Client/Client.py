@@ -17,8 +17,12 @@ from read import *
 from openPrograms import *
 from spotify import *
 
-HOST ="192.168.3.116" # The server's hostname or IP address
-PORT = 65432  # The port used by the server
+import json
+with open('../Information/public.json') as public:
+    publicData = json.load(public)
+
+HOST = publicData["IPAddress"] # The server's hostname or IP address
+PORT = publicData["Port"]  # The port used by the server
 
 
 def FridayVoiceControl(friday, voice, date, news, toDo):

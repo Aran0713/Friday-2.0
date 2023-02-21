@@ -1,10 +1,13 @@
 from tkinter import *
 import pyautogui
 from newsapi import NewsApiClient
+import json
+with open('.././Information/public.json') as public:
+    publicData = json.load(public)
+
+newsapi = NewsApiClient(api_key=publicData["newsApiKey1"]) 
 
 width, height = pyautogui.size()
-#newsapi = NewsApiClient(api_key='f8343e4bd0384897a38c71aec9bee17e')
-newsapi = NewsApiClient(api_key='659939194da24d3da6e915075bdaff44') 
 
 def createNewsWindow(topic):
     data = newsapi.get_everything(q= topic,language='en',page_size=5)
