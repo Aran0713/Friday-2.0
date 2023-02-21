@@ -1,6 +1,7 @@
-import json
+import nltk
+from nltk.corpus import wordnet
 
-with open('./Information/public.json') as public:
-    publicData = json.load(public)
-    
-print(publicData["toDoList"])
+syns=wordnet.synsets('the')[0]
+type(syns)
+
+print(syns.definition(), syns.examples(), syns.pos())
