@@ -38,7 +38,8 @@ def news(conn):
             for x,y in enumerate(newsdata):
                 speak(conn, f'{y["title"]}')
                 speak(conn, f'{y["description"]}') 
-        elif(topic != 'null'):
+        elif(topic != ''):
+            print(topic)
             speak(conn, "That category is not listed")
         else:
             speak(conn, "Sorry, I couldn't hear you")
