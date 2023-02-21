@@ -17,6 +17,7 @@ from wiki import *
 from Youtube import *
 from weather import *
 from News import *
+from getRentalAgreement import *
 
 # server constants
 import json
@@ -145,6 +146,11 @@ def threaded(conn):
                     speak(conn, "playTunes") 
                 if (all(i in query for i in closeSpotify)):
                     speak(conn, "closeSpotify") 
+
+                # Rental Agreement
+                rentalQuestion = ["get", "what's"]
+                if any(i in query for i in rentalQuestion):
+                    rentalAgreement(query, conn)
 
                 #Closing windows and app
                 closeMatter = ["close", "matter"]
