@@ -51,12 +51,14 @@ def news(conn):
         speak(conn, "Would you like to hear about another topic?")
         answer, connection = takeMic(conn)
         answer = answer.lower()
-        if ('yes' in answer):
+        if ('no' in answer.split()):
+            speak(conn, "closeMatter")
+            break
+        else:
             speak(conn, "closeMatter")
             topic = answer
             continue
-        else:
-            break
+            
     
     speak(conn, "That's all the news for now")
 

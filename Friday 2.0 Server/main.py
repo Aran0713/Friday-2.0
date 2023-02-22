@@ -148,8 +148,7 @@ def threaded(conn):
                     speak(conn, "closeSpotify") 
 
                 # Rental Agreement
-                rentalQuestion = ["get", "what's"]
-                if any(i in query for i in rentalQuestion):
+                if "rental" in query:
                     rentalAgreement(query, conn)
 
                 #Closing windows and app
