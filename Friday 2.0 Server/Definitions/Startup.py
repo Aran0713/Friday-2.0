@@ -17,6 +17,7 @@ def greeting(conn):
 def startup(conn):
     greeting(conn)
     # torontoWeather(conn)
-    speak(conn, "Friday is now at your service")
+    #speak(conn, "Friday is now at your service")
+    speak(conn, "Stan is now at your service")
     
     

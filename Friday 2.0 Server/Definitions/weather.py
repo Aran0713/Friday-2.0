@@ -19,7 +19,7 @@ def torontoWeather(conn):
     humidity = str(data['main']['humidity'])
 
     speak(conn, "The weather in Toronto is "+ temperature +" degrees celsius.")
-    speak(conn, "With a "+description+".")
+    speak(conn, "With "+description+".")
     speak(conn, "The humidity is "+ humidity + ".")
     speak(conn, "And the wind speed is "+wind_speed+".")
 

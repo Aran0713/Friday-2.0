@@ -40,7 +40,8 @@ def threaded(conn):
         query, connection = takeMic(conn)
         query = query.lower()        
         print(query)
-        if ("friday" in query):
+        #if ("friday" in query):
+        if ("stan" in query):
             speak(conn, "Now Listening")    
             while True:
                 query, connection = takeMic(conn)

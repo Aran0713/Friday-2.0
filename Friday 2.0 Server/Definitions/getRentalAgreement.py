@@ -27,7 +27,7 @@ def rentalAgreement(query, conn):
             res = respond(user_query)
             speak(conn, res)
         else:
-            falg += 1
+            flag += 1
             if flag == 2:
                 break
             speak(conn, "Sorry, I couldn't hear you")
@@ -58,7 +58,7 @@ def respond(user_query):
     flattened_sim.sort() # This gives an array with values of how similar the senetnce is from lowest to highest
     # Will put the sentence with correlation to the question in the response
     for i in range (len(flattened_sim)):
-        if (flattened_sim[-2-i] == 0 or len(bot_response.split())>50):
+        if (flattened_sim[-2-i] == 0 or len(bot_response.split())>30):
             break
         else:
             bot_response = bot_response + " " + sent_tokens[index[-2-i]]
