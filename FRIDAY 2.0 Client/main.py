@@ -34,7 +34,8 @@ titleLabel.pack(pady=4)
 #titleBar.bind("<B1-Motion>", move_app)
 
 # Friday label
-fridayLabel = Label(friday, text="F.R.I.D.A.Y", bg="black", fg="white", font=("Courier, 45"))
+#fridayLabel = Label(friday, text="F.R.I.D.A.Y", bg="black", fg="white", font=("Courier, 45"))
+fridayLabel = Label(friday, text="STAN", bg="black", fg="white", font=("Courier, 45"))
 fridayLabel.place(relx=0.5,rely=0.5, anchor='center')
 
 
@@ -57,10 +58,10 @@ date.configure(bg="black")
 date.attributes('-alpha',0.8)
 
 # Month label
-monthLabel = Label(date, text=month[monthNum], bg="black", fg="white", font=("Courier, 30"))
+monthLabel = Label(date, text=month[monthNum], bg="black", fg="white", font=("Courier, 25"))
 monthLabel.pack()
 # Day label
-dayLabel = Label(date, text=day, bg="black", fg="white", font=("Courier, 30"))
+dayLabel = Label(date, text=day, bg="black", fg="white", font=("Courier, 25"))
 dayLabel.pack()
 
 

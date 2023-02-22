@@ -16,6 +16,7 @@ username = privateData["spotifyUsername"]
 clientID = privateData["spotifyClientID"]
 clientSecret = privateData["spotifyClientSecret"]
 redirectURI = 'http://google.com/'
+password = ""
 
 # Create OAuth Object
 oauth_object = spotipy.SpotifyOAuth(clientID,clientSecret,redirectURI)
@@ -45,7 +46,7 @@ def setUpPlaylist():
     usernameInput.send_keys("aran0713@hotmail.com")
     passwordInput = driver.find_element(by="xpath", value='//input[@id="login-password"]')
     passwordInput.click()
-    passwordInput.send_keys("sangeethkeke")
+    passwordInput.send_keys(password)
     passwordInput.send_keys(Keys.RETURN)
     return driver
       
@@ -167,7 +168,7 @@ def playSong():
     usernameInput.send_keys("aran0713@hotmail.com")
     passwordInput = driver.find_element(by="xpath", value='//input[@id="login-password"]')
     passwordInput.click()
-    passwordInput.send_keys("sangeethkeke")
+    passwordInput.send_keys(password)
     passwordInput.send_keys(Keys.RETURN)
         
     sleep(5)
